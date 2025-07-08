@@ -1,0 +1,8 @@
+apache-beam[gcp]
+google-cloud-pubsub
+google-cloud-bigquery
+google-cloud-firestore
+google-cloud-aiplatform
+oauth2client
+google-cloud-secret-manager
+
