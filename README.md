@@ -102,6 +102,37 @@ This project implements a scalable real-time fraud detection system for financia
 
 🔗 **[Dashboard Link](https://lookerstudio.google.com/reporting/abd9c51b-984e-4b45-a12b-86cf08bbdabe)**
 
----
+![Dashboard page 1](https://github.com/SahiLmb/Credit-Card-Fraud-Detection-using-Google-Cloud/blob/main/Snapshots/Fraud_Detection_Analysis_page-0001.jpg)
+
+![Dashboard page 2](https://github.com/SahiLmb/Credit-Card-Fraud-Detection-using-Google-Cloud/blob/main/Snapshots/Fraud_Detection_Analysis_page-0002.jpg)
+
+
+## Email to Bank
+![bank mail](https://github.com/SahiLmb/Credit-Card-Fraud-Detection-using-Google-Cloud/blob/main/Snapshots/bank%20mail.png)
+
+## Email to Customer
+![customer mail](https://github.com/SahiLmb/Credit-Card-Fraud-Detection-using-Google-Cloud/blob/main/Snapshots/user%20mail.png)
+
+## **Code Structure**
+```plaintext
+├── Home Directory  
+|   ├── Dataflow_pipeline.py
+|   ├── Pubsub_Transactions.py
+|   ├── fraud_data.csv
+|   ├── requirements.txt
+```
+
+## **Conclusion**
+This end-to-end credit card fraud detection system showcases the power of integrating Google Cloud services to build a scalable, real-time fraud detection pipeline. By leveraging BigQuery ML for model training, Dataflow for streaming data processing, Pub/Sub for event-driven architecture, Firestore for intermediate storage, and Looker Studio for visual analytics, the system offers a seamless workflow from data ingestion to fraud alerting.
+
+### Key highlights include:
+
+- Real-time fraud prediction with automated notifications to banks and customers.
+
+- Secure handling of sensitive credentials using Secret Manager.
+
+- Interactive dashboards for transaction monitoring and actionable insights.
+
+This architecture not only helps detect fraudulent activity efficiently but also serves as a strong foundation for similar use cases across industries such as insurance fraud, transaction risk scoring, or anomaly detection systems.
 
 
