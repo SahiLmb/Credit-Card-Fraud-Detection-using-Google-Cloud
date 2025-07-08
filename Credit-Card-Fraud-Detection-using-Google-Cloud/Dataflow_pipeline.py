@@ -24,7 +24,7 @@ class StoreToFirestoreAndBQ(beam.DoFn):
         yield data  # Passing to BigQuery
 
 def run():
-    project = "cred-462105"
+    project = "your-project-id"  # 🔐 Replace with your GCP project ID
 
     schema = """
         type:STRING,
@@ -50,10 +50,10 @@ def run():
     with beam.Pipeline(options=options) as p:
         (
             p
-            | "Read from PubSub" >> beam.io.ReadFromPubSub(subscription="projects/cred-462105/subscriptions/credit-card-transactions-sub")
+            | "Read from PubSub" >> beam.io.ReadFromPubSub(subscription="projects/your-project-id/subscriptions/your-subscription-id")
             | "Process and Store" >> beam.ParDo(StoreToFirestoreAndBQ(project))
             | "Write to BQ temp table" >> beam.io.WriteToBigQuery(
-                table="cred-462105:fraud_detection.temp_transaction_input",
+                table="your-project-id:your_dataset.temp_transaction_input",
                 schema=schema,
                 write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
                 create_disposition=beam.io.BigQueryDisposition.CREATE_IF_NEEDED

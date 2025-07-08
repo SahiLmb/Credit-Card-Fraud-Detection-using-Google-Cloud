@@ -15,7 +15,7 @@ def clean(text):
 def hello_pubsub(event, context):
     # Load SMTP credentials from Secret Manager
     secret_client = secretmanager.SecretManagerServiceClient()
-    project_id = "cred-462105"
+    project_id = "your_project_id"
     secret_response = secret_client.access_secret_version(
         {"name": f"projects/{project_id}/secrets/smtp_credentials/versions/latest"}
     )
